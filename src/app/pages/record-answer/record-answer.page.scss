@@ -1,0 +1,23 @@
+.container {
+    height: 100%;
+    width: 100%;
+    // padding-top: env(safe-area-inset-top) !important;
+
+  }
+  .iframe {
+    height: 100%;
+    width: 100%;
+  }
+
+  .colCls{
+    text-align: center;
+    border-width:1px;
+    border-color: black;
+  }
+
+
+ 
+  .fontCls {
+    font-size: 12px !important;
+  }
+

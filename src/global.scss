@@ -9,18 +9,279 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+body {
+    // margin-top: constant(safe-area-inset-top);
+    // margin-top: env(safe-area-inset-top);
+    font-family: "Montserrat", "Helvetica-Neue", "Roboto-Light", sans-serif !important;
+}
+
+// ion-footer {
+//     margin-top: -25px;
+//     // margin-top: env(safe-area-inset-top);
+// }
+
+// ion-content{
+//     padding-top: env(safe-area-inset-top);
+// }
+
+ion-header { 
+    font-family: "Montserrat", "Helvetica-Neue", "Roboto-Light", sans-serif !important;
+    text-align: left!important;
+    padding-left: 0px !important;
+    --padding-left: 0px !important;
+    ion-title{
+        margin-left: -15px !important;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+}
+
+
+body.backdrop-no-scroll {
+    .main,
+    ion-header {
+        filter: blur(2px);
+    }
+}
+
+*:focus {
+    outline: 0px !important;
+}
+
+
+// ion-modal {
+//     --border-radius: 12px!important;
+//   }
+
+/*ion-modal {
+    &.my-modal-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ion-backdrop {
+            visibility: visible;
+        }
+
+        .modal-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            overflow: auto;
+            width: auto;
+            height: auto;
+            left: auto;
+            top: auto;
+            contain: content;
+
+            max-width: 70%;
+            max-height: 70%;
+
+            border-radius: 2px;
+            box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+
+            > .ion-page {
+                position: relative;
+                display: block;
+                width: auto;
+                height: auto;
+                contain: content;
+                box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        &.my-stretch {
+            .modal-wrapper {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+
+                > .ion-page {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &.my-fullscreen {
+        .modal-wrapper {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }   
+}*/
+
+.my-custom-modal-css .modal-wrapper {
+    height: 60%;
+    width: 100%;
+    top: 40%;
+    background-color: #383a3e;
+    color: white;
+    position: absolute;
+    display: block;
+}
+
+.my-custom-modal-css1 .modal-wrapper {
+    height: 70%;
+    width: 100%;
+    top: 70%;
+    background-color: #383a3e;
+    color: white;
+    position: absolute;
+    display: block;
+}
+
+.my-custom-class .alert-wrapper {
+    // display: flex;
+    align-items: center;
+    height: 40%;
+    max-width: 400px;
+    box-shadow: none;
+    background: #fff;
+    margin: 0;
+}
+
+.menuIcon{
+    height: 16px;
+    width: 16px;
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #058988;
+}
+
+.failure-button {
+    text-align: center;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color: #d7d7d7;
+    border-style: solid;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    height: 85px;
+}
+
+// CUSTOM ALERT
+.basic-alert {
+
+
+    .alert-wrapper {
+        min-width: 92% !important;
+        border-radius: 15px !important;
+    }
+    .alert-wrapper.ion-overlay-wrapper.sc-ion-alert-md {
+        // max-width: 200px !important;
+        padding-top: 6vh;
+        border-radius: 25px;
+        padding-bottom: 6vh;
+        font-family: "Montserrat", "Helvetica-Neue", "Roboto-Light", sans-serif !important;
+    }
+    
+    .alert-title {
+        font-size: 32px;
+        color: #058988;
+        text-align: center;
+        font-weight: 500;
+        @media(max-width: 360px) {
+            font-size: 24px;
+        }
+    }
+    .alert-button-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #bfbfbf;
+        max-width: 200px;
+        margin: auto;
+        flex-wrap: inherit;
+        padding: 0;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        height: 66px;
+        overflow: hidden;
+        @media(max-width: 360px) {
+            max-width: 180px;
+            height: 50px;
+        }
+    }
+    .alert-button {
+        color: #000;
+        font-weight: 900;
+        width: 50%;
+        border: 0px;
+        border-right: 1px solid #2d2d2d;
+        flex: 0 0 50%;
+        text-align: center;
+        justify-content: center;
+        padding: 0 0 0 0px;
+        margin: 0;
+        position: static;
+        height: 100%;
+        &:last-child {
+            border: 0px;
+        }
+        span.alert-button-inner {
+            justify-content: center;
+            font-size: 26px;
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+            @media(max-width: 360px) {
+                font-size: 22px;
+            }
+        }
+    }
+    .alert-button-group button:first-child span {
+        color: green;
+    }
+    .alert-button-group button:last-child span {
+        color: #9d1414;
+    }
+}
+
+// ion-split-pane{ 
+//     --border: none !important;
+//     ion-menu{
+//      --background: var(--ion-color-primary) !important; 
+//         ion-content{            
+//             --background: var(--ion-color-primary) !important; 
+//             ion-list-header{ 
+//                 --background: var(--ion-color-primary) !important;
+//                 --color: #FFFFFF !important;   
+//             }
+//             ion-item{
+//                 --background: var(--ion-color-primary) !important;
+//                  --color: #FFFFFF !important;
+//                  ion-icon{ padding-right: 10px !important; }
+//             }
+//         }
+//     }
+// }

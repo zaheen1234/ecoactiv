@@ -1,3 +1,68 @@
-<ion-app>
+
+<!-- <ion-app>
   <ion-router-outlet></ion-router-outlet>
+</ion-app> -->
+
+<ion-app>
+    <ion-split-pane contentId="main-content" class="contentClass">
+        <ion-menu contentId="main-content" type="overlay">
+            <ion-content>
+                <div class="inbox-list">
+                    <ion-grid id="main-grid">
+                        <ion-menu-toggle auto-hide="false" id="m-toggle">
+                            <ion-row>
+                                <ion-col>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col>
+                                    <ion-label>
+                                        <ion-icon name="close"></ion-icon>
+                                    </ion-label>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="voice-row">
+                                <ion-col class="appName label-voice">
+                                    <ion-label> EcoActive
+                                    </ion-label>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-row (click)="goToThisPage('home')" class="btm-menu btn-home">
+                                <ion-col>
+                                    <ion-label>Home
+                                    </ion-label>
+                                </ion-col>
+                            </ion-row>
+                           
+                            <ion-row (click)="goToThisPage('privacy')" class="btm-menu">
+                                <ion-col>
+                                    <ion-label> Privacy Policy
+                                    </ion-label>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row (click)="goToThisPage('terms')" class="btm-menu">
+                                <ion-col>
+                                    <ion-label>Terms & Conditions
+                                    </ion-label>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row (click)="goToThisPage('contact')" class="btm-menu">
+                                <ion-col>
+                                    <ion-label> <span>Contact Us</span>
+                                    </ion-label>
+                                </ion-col>
+                            </ion-row>
+                        </ion-menu-toggle>
+
+                    </ion-grid>
+                </div>
+
+            </ion-content>
+
+        </ion-menu>
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
 </ion-app>
+<!-- <ion-router-outlet></ion-router-outlet>
+  </ion-app> -->
